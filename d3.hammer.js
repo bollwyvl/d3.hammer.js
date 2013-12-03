@@ -1,3 +1,12 @@
+/*! d3 plugin for Hammer.JS - v1.0.0 - 2013-12-03
+ * http://eightmedia.github.com/hammer.js
+ *
+ * Copyright (c) 2013 Nicholas Bollweg <nick.bollweg@gmail.com>;
+ * Licensed under the MIT license */
+
+(function(window, undefined) {
+  'use strict';
+
 function setup(Hammer, d3) {
   // from https://github.com/EightMedia/hammer.js/wiki/Getting-Started#gesture-options
   var option_names = [
@@ -118,3 +127,15 @@ function setup(Hammer, d3) {
     return my;
   };
 }
+
+  // Based off Lo-Dash's excellent UMD wrapper (slightly modified) - https://github.com/bestiejs/lodash/blob/master/lodash.js#L5515-L5543
+  // some AMD build optimizers, like r.js, check for specific condition patterns like the following:
+  if(typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
+    // define as an anonymous module
+    define(['hammer', 'd3'], setup);
+  
+  }
+  else {
+    setup(window.Hammer, window.d3);
+  }
+})(this);

@@ -22,17 +22,17 @@ module.exports = (grunt) ->
           'src/intro.js'
           'src/plugin.js'
           'src/outro.js']
-        dest: 'jquery.hammer.js'
+        dest: 'd3.hammer.js'
 
     # minify the sourcecode
     uglify:
       options:
         report: 'gzip'
-        sourceMap: 'jquery.hammer.min.map'
+        sourceMap: 'd3.hammer.min.map'
         banner: '<%= meta.banner %>'
       dist:
         files:
-          'jquery.hammer.min.js': ['jquery.hammer.js']
+          'd3.hammer.min.js': ['d3.hammer.js']
 
     # check for optimisations and errors
     jshint:
@@ -54,7 +54,7 @@ module.exports = (grunt) ->
           Hammer: true,
           define: false
       dist:
-        src: ['jquery.hammer.js']
+        src: ['d3.hammer.js']
 
     # watch for changes
     watch:

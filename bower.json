@@ -1,9 +1,9 @@
 {
-    "name": "jquery-hammerjs",
+    "name": "d3-hammerjs",
     "version": "1.0.0",
-    "main": ["jquery.hammer.js"],
+    "main": ["d3.hammer.js"],
     "dependencies": {
-      "jquery": "*",
+      "d3": "3.3.x",
       "hammerjs": "1.0.x"
     },
     "ignore": [
